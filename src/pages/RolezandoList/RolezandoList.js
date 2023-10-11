@@ -33,6 +33,7 @@ const RolezandoList = () => {
 
     const newData = [];
 
+    // eslint-disable-next-line array-callback-return
     list.filter((item) => {
       if (
         item.nome.toLowerCase().includes(filterValue.toLowerCase()) ||
@@ -44,6 +45,7 @@ const RolezandoList = () => {
     });
 
     setList(newData);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterValue]);
 
   const getData = () => {
