@@ -44,7 +44,7 @@ const RolezandoList = () => {
     });
 
     setList(newData);
-  }, [filterValue, list]);
+  }, [filterValue]);
 
   const getData = () => {
     const data = fetch(URL_GOOGLE_SHEETS).then((res) => res.text());
@@ -101,7 +101,7 @@ const RolezandoList = () => {
         }}
       >
         <input
-          placeholder="Filtrar"
+          placeholder="Você pode filtrar por Nome, Cidade ou Categoria"
           style={{
             border: "none",
             width: "100%",
@@ -138,7 +138,7 @@ const RolezandoList = () => {
                     </div>
                   </Informations>
                   <Comments>
-                    {item.comentario && <Label>{item.comentario}</Label>}
+                    <Label>{`Comentário: ${item.comentario ?? ""}`}</Label>
                   </Comments>
                   <Button onClick={() => mapsRedirect(item.nome)}>
                     Let's bora
