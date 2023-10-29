@@ -1,0 +1,65 @@
+{
+  "currentStep": "settings",
+  "strategy": "INTRODUCE",
+  "subStrategy": "I2",
+  "name": "stsaaa2",
+  "createdBy": {
+    "id": "string",
+    "name": "string",
+    "email": "user@example.com"
+  },
+   "audiencesSegmentation": [
+        {
+            "segmentationId": "MX20230912-0011-d8c9d97e-a44e-4f96-b90b-58bc0646996f",
+            "audienceId": "642ef5bdc1b96971a640bafb",
+            "filterId": "6436d9467e420d6e673bb6aa",
+            "audienceName": "Audience Automation MX",
+            "vendorId": "df9c1f38-a223-4d03-95ba-85f83c3daa10",
+            "popParams": {
+                "skus": ["123"],
+                "strategies": ["1234"]
+            },
+            "touchpoints": [
+                {
+                    "touchpointId": "652d768ea3458f5bdc6f73e1",
+                    "touchpoint": "REWARDS_CHALLENGE_MULTIPLE_ORDER",
+                    "category": "REWARDS_CHALLENGE",
+                    "personalized": false,
+                    "startDate": "2024-02-04",
+                    "endDate": "2024-02-08",
+                    "title": "test",
+                    "description": "teste",
+                    "pointsValue": 1,
+                    "rewardsCampaignId": "1",
+                    "coverImageUrl": "https://cms-non-prod.global.ssl.fastly.net/media/10-18-2023-wp6407115-f11a3a77.jpg",
+                    "promoPrefix": null,
+                    "items": [
+                        {
+                            "sku": "000789",
+                            "goalInputId": "000789",
+                            "name": "Colorado",
+                            "brand": null,
+                            "imageUrl": "https://cms-non-prod.global.ssl.fastly.net/media/08-30-2023-3fc64111-e9df-4e69-afbd-d0fcf26a9692-4c7d6f32.jpeg",
+                            "vendorId": "df9c1f38-a223-4d03-95ba-85f83c3daa10",
+                            "manufacturerId": null,
+                            "quantity": 1
+                        }
+                    ]
+                }
+            ]
+        }],
+  "startDate": "2023-10-16",
+  "endDate": "2023-10-17",
+  "status": "DRAFT",
+  "items": [
+    {
+      "sku": "string",
+      "goalInputId": "string",
+      "name": "string",
+      "brand": "string",
+      "imageUrl": "https://cms-non-prod.global.ssl.fastly.net/media/08-30-2023-20c735aa-a864-49b2-9660-6b47a82f8b99-dba5bcbb.jpeg",
+      "vendorId": "string",
+      "manufacturerId": "string"
+    }
+  ]
+}

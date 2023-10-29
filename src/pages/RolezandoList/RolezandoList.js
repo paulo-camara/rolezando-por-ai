@@ -19,6 +19,7 @@ import {
   Button,
   Label,
 } from "../../components/RoleData/RoleData";
+import InstaIcon from "../../assets/images/instagram.png";
 
 const RolezandoList = () => {
   const [list, setList] = useState([]);
@@ -67,8 +68,8 @@ const RolezandoList = () => {
       response.table.rows.forEach((row) => {
         let value = {};
 
-        row.c.forEach(({ v }, index) => {
-          value = { ...value, [headers[index]]: v };
+        row.c.forEach((item, index) => {
+          value = { ...value, [headers[index]]: item ? item.v : "" };
         });
 
         data.push({ ...value });
@@ -84,6 +85,10 @@ const RolezandoList = () => {
 
   const mapsRedirect = (nome) => {
     window.open(`https://www.google.com.br/maps/search/${nome}`, "_blank");
+  };
+
+  const instaRedirect = (link) => {
+    window.open(link, "_blank");
   };
 
   const onChangeFilter = (e) => {
@@ -142,6 +147,16 @@ const RolezandoList = () => {
                   <Comments>
                     <Label>{`Comentário: ${item.comentario ?? ""}`}</Label>
                   </Comments>
+                  {item.instagram && (
+                    <div style={{ textAlign: "start", marginTop: "20px" }}>
+                      <img
+                        onClick={() => instaRedirect(item.instagram)}
+                        style={{ width: "30px", cursor: "pointer" }}
+                        src={InstaIcon}
+                        alt="insta-icon"
+                      />
+                    </div>
+                  )}
                   <Button onClick={() => mapsRedirect(item.nome)}>
                     Let's bora
                   </Button>
